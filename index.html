@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+    <!-- Replace the content tag with appropriate information -->
+    <meta
+      name="description"
+      content="Human activities have an underlying hierarchical structure that is mostly overlooked by deep learning models but can be used to better reason about them. Such structure can emerge naturally from unscripted videos of human activities, and can be leveraged to better reason about their content. We present HiERO, a weakly-supervised method to enrich video segment features with the corresponding hierarchical activity threads, achieving SOTA in video-language alignment and procedure learning tasks."
+    />
+    <meta
+      property="og:title"
+      content="HiERO: understanding the hierarchy of human behavior enhances reasoning on egocentric videos"
+    />
+    <meta
+      property="og:description"
+      content="Human activities have an underlying hierarchical structure that is mostly overlooked by deep learning models but can be used to better reason about them. Such structure can emerge naturally from unscripted videos of human activities, and can be leveraged to better reason about their content. We present HiERO, a weakly-supervised method to enrich video segment features with the corresponding hierarchical activity threads, achieving SOTA in video-language alignment and procedure learning tasks."
+    />
+    <meta property="og:url" content="sapeirone.github.io/HiERO" />
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+    <meta property="og:image" content="static/image/teaser.jpg" />
+    <!--meta property="og:image:width" content="1200"/-->
+    <!--meta property="og:image:height" content="630"/-->
+
+    <meta
+      name="twitter:title"
+      content="HiERO: understanding the hierarchy of human behavior enhances reasoning on egocentric videos"
+    />
+    <meta
+      name="twitter:description"
+      content="Human activities have an underlying hierarchical structure that is mostly overlooked by deep learning models but can be used to better reason about them. Such structure can emerge naturally from unscripted videos of human activities, and can be leveraged to better reason about their content. We present HiERO, a weakly-supervised method to enrich video segment features with the corresponding hierarchical activity threads, achieving SOTA in video-language alignment and procedure learning tasks."
+    />
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+    <meta name="twitter:image" content="static/image/teaser.jpg" />
+    <meta
+      name="twitter:card"
+      content="Human activities have an underlying hierarchical structure that is mostly overlooked by deep learning models but can be used to better reason about them. Such structure can emerge naturally from unscripted videos of human activities, and can be leveraged to better reason about their content. We present HiERO, a weakly-supervised method to enrich video segment features with the corresponding hierarchical activity threads, achieving SOTA in video-language alignment and procedure learning tasks."
+    />
+    <!-- Keywords for your paper to be indexed by-->
+    <meta
+      name="keywords"
+      content="Egocentric Vision; Procedure Learning; Step Grounding; Step Localization; Video-Language Alignment"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>
+      HiERO: understanding the hierarchy of human behavior enhances reasoning on
+      egocentric videos
+    </title>
+    <link rel="icon" type="image/x-icon" href="static/images/favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+      rel="stylesheet"
+    />
+
+    <script async data-id="101477061" src="//static.getclicky.com/js"></script>
+
+    <link rel="stylesheet" href="static/css/bulma.min.css" />
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css" />
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css" />
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
+    />
+    <link rel="stylesheet" href="static/css/index.css" />
+
+    <script src="static/js/jquery.min.js"></script>
+    <script defer src="static/js/fontawesome.all.min.js"></script>
+    <script src="static/js/bulma-carousel.min.js"></script>
+    <script src="static/js/bulma-slider.min.js"></script>
+    <script src="static/js/index.js"></script>
+
+    <style type="text/css"></style>
+  </head>
+  <body>
+    <section class="hero">
+      <div class="hero-body" style="padding-bottom: 0.55rem">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1
+                class="title is-4 publication-title"
+                style="font-size: 2.75rem; margin-bottom: 8px"
+              >
+                HiERO:<br />understanding the <span style="text-decoration: underline;">hi</span>erarchy of human b<span style="text-decoration: underline;">e</span>havior
+                enhances <span style="text-decoration: underline;">r</span>easoning on eg<span style="text-decoration: underline;">o</span>centric videos
+              </h1>
+              <div class="is-size-5 publication-authors">
+                <!-- Paper authors -->
+                <h2 class="subtitle is-3">🌴&nbsp;<b>ICCV 2025</b></h2>
+                <span class="author-block"
+                  ><a
+                    href="https://scholar.google.com/citations?user=K0efPssAAAAJ"
+                    target="_blank"
+                    >Simone Alberto Peirone</a
+                  >,</span
+                >
+                <span class="author-block"
+                  ><a
+                    href="https://scholar.google.com/citations?user=7MJdvzYAAAAJ"
+                    target="_blank"
+                    >Francesca Pistilli</a
+                  >,</span
+                >
+                <span class="author-block"
+                  ><a
+                    href="https://scholar.google.com/citations?user=i4rm0tYAAAAJ"
+                    target="_blank"
+                    >Giuseppe Averta</a
+                  ></span
+                >
+              </div>
+
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">
+                  Politecnico di Torino&nbsp;&nbsp;
+                  <br />
+                  <small><tt>simone.peirone@polito.it</tt></small>
+                </span>
+              </div>
+
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <!-- Arxiv PDF link -->
+
+                  <span class="link-block">
+                    <a
+                      href="https://arxiv.org/abs/2505.12911"
+                      target="_blank"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>ArXiv</span>
+                    </a>
+                  </span>
+                  &nbsp;&nbsp;
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a
+                      href="https://github.com/sapeirone/HiERO"
+                      target="_blank"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Code</span>
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Teaser video-->
+    <section class="hero teaser">
+      <div
+        class="container is-max-desktop"
+        style="width: calc(100% - 32px); max-width: 720px; margin-bottom: 32px"
+      >
+        <figure class="image">
+          <img
+            src="static/images/teaser_animated.gif"
+            alt=""
+            style="max-width: 768px; margin: auto"
+          />
+        </figure>
+        <caption>
+          <center>
+            <b>Zero-Shot procedure step localization with HiERO.</b> Given a
+            long video, HiERO computes segment-level features that encode the
+            functional dependencies between its actions at different scales,
+            enabling the detection of procedure steps through a simple
+            clustering in feature space.
+          </center>
+        </caption>
+      </div>
+    </section>
+    <!-- End teaser video -->
+
+    <!-- Paper abstract -->
+    <section class="section hero">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                Human activities are particularly complex and variable, and this
+                makes challenging for deep learning models to reason about them.
+                However, we note that such variability does have an underlying
+                structure, composed of a hierarchy of patterns of related
+                actions. We argue that such structure can emerge naturally from
+                unscripted videos of human activities, and can be leveraged to
+                better reason about their content. We present HiERO, a
+                weakly-supervised method to enrich video segments features with
+                the corresponding hierarchical activity threads. By aligning
+                video clips with their narrated descriptions, HiERO infers
+                contextual, semantic and temporal reasoning with an hierarchical
+                architecture. We prove the potential of our enriched features
+                with multiple video-text alignment benchmarks (EgoMCQ, EgoNLQ)
+                with minimal additional training, and in zero-shot for procedure
+                learning tasks (EgoProceL and Ego4D Goal-Step). Notably, HiERO
+                achieves state-of-the-art performance in all the benchmarks, and
+                for procedure learning tasks it outperforms fully-supervised
+                methods by a large margin (+12.5% F1 on EgoProceL) in zero shot.
+                Our results prove the relevance of using knowledge of the
+                hierarchy of human activities for multiple reasoning tasks in
+                egocentric vision.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End paper abstract -->
+
+    <section
+      class="section hero"
+      style="padding-bottom: 0.75rem; padding-top: 0.5rem"
+    >
+      <div class="container is-max-desktop">
+        <div
+          class="hero-body"
+          style="padding-bottom: 0.75rem; padding-top: 0.5rem"
+        >
+          <h3 class="title is-3">
+            💡 How are human actions modeled by video models?
+          </h3>
+          <p>
+            Human activities are complex, hierarchical and goal-oriented. We
+            question how different video understanding models encode such
+            hierarchy in the features space. We take a video and extract
+            features from dense segments. Then we compute the pairwise feature
+            similarity for the entire video.
+          </p>
+          <figure class="image" style="margin-top: 32px; margin-bottom: 32px">
+            <img
+              src="static/images/intuition.jpg"
+              alt=""
+              style="max-width: 768px; margin: auto; margin-bottom: 0.75rem"
+            />
+            <caption>
+              <center>
+                <b
+                  >Emergence of step clusters in the features similarity matrix
+                  of a video from Ego4D</b
+                >
+                <br />
+                <small>
+                  Colored rectangles indicate the ground truth steps. Ideally,
+                  we expect high similarity if two segments represent
+                  semantically similar steps. With Omnivore features, this
+                  behavior is only partially visible. On EgoVLP features, we
+                  observe sharper clusters of temporal segments that are not
+                  necessarily close temporally, but represent similar high-level
+                  actions. Our approach makes this behavior even more visible.
+                </small>
+              </center>
+            </caption>
+          </figure>
+        </div>
+      </div>
+    </section>
+    <section
+      class="section hero"
+      style="padding-bottom: 0.75rem; padding-top: 0.5rem"
+    >
+      <div class="container is-max-desktop">
+        <div
+          class="hero-body"
+          style="padding-bottom: 0.75rem; padding-top: 0.5rem"
+        >
+          <h4 class="title is-3">
+            🔧 Learning high-level human activities without supervision
+          </h4>
+          <p>
+            We design HiERO based on the intuition that, given a sufficiently
+            large collection of videos capturing human activities in-the-wild,
+            <b
+              ><i>functional dependencies</i> between actions naturally emerge
+              as frequently co-occurring patterns directly from observations</b
+            >. With HiERO, we learn a feature space that captures these
+            functional dependencies between actions, i.e., those that frequently
+            co-occur together are close to each other and distant from the
+            others. As a result,
+            <b
+              >HiERO's features space allows related actions to be easily
+              grouped into high-level patterns with a simple clustering
+              operation</b
+            >.
+          </p>
+          <figure class="image" style="margin-top: 32px; margin-bottom: 32px">
+            <img
+              src="static/images/architecture.png"
+              alt=""
+              style="max-width: 768px; margin: auto; margin-bottom: 0.75rem"
+            />
+            <caption>
+              <center>
+                <b>Architecture of HiERO</b>
+                <br />
+                <small>
+                  The <i>Temporal Encoder</i> performs temporal reasoning on
+                  graph representations of the input video at different scales,
+                  while the <i>Function-Aware Decoder</i> recombines nodes in
+                  the video graph by matching segments that represent functional
+                  dependencies between the actions.
+                  <b
+                    >HiERO is trained to align video segments with their
+                    corresponding textual narrations at the shallower layer, and
+                    to strengthen thread-aware clustering in deeper layers.</b
+                  >
+                </small>
+              </center>
+            </caption>
+          </figure>
+        </div>
+      </div>
+    </section>
+    <section
+      class="section hero"
+      style="padding-bottom: 0.75rem; padding-top: 0.5rem"
+    >
+      <div class="container is-max-desktop">
+        <div
+          class="hero-body"
+          style="padding-bottom: 0.75rem; padding-top: 0.5rem"
+        >
+          <h4 class="title is-4">
+            🔥 HiERO is good at video-language alignment...
+          </h4>
+          <p>
+            We evaluate HiERO on EgoMCQ and EgoNLQ to validate its video-text
+            alignment capabilities and to show that reasoning on functional
+            threads at different scales can support various video understanding
+            tasks. Together, video-narrations alignment and functional
+            clustering are effective to discriminate between similar short-term
+            actions, which is critical for EgoMCQ, as well as to capture
+            long-range causal and temporal dependencies in the video, which is
+            essential for EgoNLQ.
+          </p>
+          <figure class="image" style="margin-top: 32px; margin-bottom: 32px">
+            <img
+              src="static/images/vla.png"
+              alt=""
+              style="max-width: 768px; margin: auto"
+            />
+            <caption>
+              <center><b>HiERO results on EgoMCQ and EgoNLQ.</b></center>
+            </caption>
+          </figure>
+        </div>
+      </div>
+    </section>
+    <section
+      class="section hero"
+      style="padding-bottom: 0.75rem; padding-top: 0.5rem"
+    >
+      <div class="container is-max-desktop">
+        <div
+          class="hero-body"
+          style="padding-bottom: 0.75rem; padding-top: 0.5rem"
+        >
+          <h4 class="title is-4">
+            🚀 ...and excels at (zero-shot) procedure learning!
+          </h4>
+          <p>
+            We evaluate HiERO on EgoProceL in <i>zero-shot</i>, using visual
+            features extracted from the Omnivore and EgoVLP backbones. we
+            evaluate on this benchmark the ability of HiERO to group together
+            parts of the video that correspond to the same high-level activity
+            by leveraging their functional similarity, even though it was not
+            trained explicitly to identify procedure steps inside a video.
+          </p>
+          <figure class="image" style="margin-top: 32px; margin-bottom: 32px">
+            <img
+              src="static/images/egoprocel.png"
+              alt=""
+              style="max-width: 768px; margin: auto"
+            />
+            <caption>
+              <center>
+                <b>HiERO results on Procedure Learning on EgoProceL.</b>
+              </center>
+            </caption>
+          </figure>
+          <p>
+            We also evaluate HiERO on the Step-Grounding and Step Localization
+            tasks from Ego4D Goal-Step, both in zero-shot and supervised
+            settings. Compared to supervised approaches that learn a direct
+            mapping between the video and the procedure steps, we argue that the
+            steps detected by HiERO emerge as composition of low-level patterns
+            that are clustered together.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section
+      class="section"
+      style="padding-bottom: 0.75rem; padding-top: 0.5rem"
+    >
+      <div class="container is-max-desktop">
+        <div id="carousel-demo" class="carousel">
+          <div class="item">
+            <figure
+              class="image"
+              style="margin-top: 32px; margin-bottom: 32px; padding: 2.5rem"
+            >
+              <img
+                src="static/images/0f07958c-04e3-4be9-9118-f3313c4e183e.pdf-1.jpg"
+                alt="Carousel Image 1"
+              />
+            </figure>
+          </div>
+          <div class="item">
+            <figure
+              class="image"
+              style="margin-top: 32px; margin-bottom: 32px; padding: 2.5rem"
+            >
+              <img
+                src="static/images/4bddae9e-8ffb-4a03-9421-adf6268d91b6.pdf-1.jpg"
+                alt="Carousel Image 2"
+              />
+            </figure>
+          </div>
+          <div class="item">
+            <figure
+              class="image"
+              style="margin-top: 32px; margin-bottom: 32px; padding: 2.5rem"
+            >
+              <img
+                src="static/images/64b355f3-ef49-4990-8622-9e9eef68b495.pdf-1.jpg"
+                alt="Carousel Image 3"
+              />
+            </figure>
+          </div>
+          <div class="item">
+            <figure
+              class="image"
+              style="margin-top: 32px; margin-bottom: 32px; padding: 2.5rem"
+            >
+              <img
+                src="static/images/603a427f-9191-4ca4-a1b0-dd3c5e7fda70.pdf-1.jpg"
+                alt="Carousel Image 4"
+              />
+            </figure>
+          </div>
+        </div>
+        <script>
+          bulmaCarousel.attach("#carousel-demo", {
+            initialSlide: 1,
+            slidesToScroll: 0,
+            slidesToShow: 4,
+            loop: False,
+          });
+        </script>
+      </div>
+    </section>
+
+    <!--BibTex citation -->
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <h2 class="title">Cite us</h2>
+        <pre><code>@article{peirone2025hiero,
+  title={HiERO: understanding the hierarchy of human behavior enhances reasoning on egocentric videos},
+  author={Peirone, Simone Alberto and Pistilli, Francesca and Averta, Giuseppe},
+  journal={arXiv preprint arXiv:2505.12911},
+  year={2025}
+}</code></pre>
+      </div>
+    </section>
+    <!--End BibTex citation -->
+
+    <footer class="footer">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content">
+              <p>
+                This page was built using the
+                <a
+                  href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                  target="_blank"
+                  >Academic Project Page Template</a
+                >
+                which was adopted from the <a
+                  href="https://nerfies.github.io"
+                  target="_blank"
+                  >Nerfies</a
+                > project page. You are free to borrow the of this website, we
+                just ask that you link back to this page in the footer. <br />
+                This website is licensed under a
+                <a
+                  rel="license"
+                  href="http://creativecommons.org/licenses/by-sa/4.0/"
+                  target="_blank"
+                  >Creative Commons Attribution-ShareAlike 4.0 International
+                  License</a
+                >.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

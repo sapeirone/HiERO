@@ -185,11 +185,13 @@
     <!-- End teaser video -->
 
     <!-- Paper abstract -->
-    <section class="section hero">
+    <section class="section hero is-light">
       <div class="container is-max-desktop">
-        <div class="columns is-centered has-text-centered">
-          <div class="column is-four-fifths">
-            <h2 class="title is-3">Abstract</h2>
+        <div
+          class="hero-body"
+          style="padding-bottom: 0.75rem; padding-top: 0.5rem"
+        >
+            <h2 class="title is-3" style="text-align: center;">Abstract</h2>
             <div class="content has-text-justified">
               <p>
                 Human activities are particularly complex and variable, and this
@@ -214,16 +216,16 @@
                 hierarchy of human activities for multiple reasoning tasks in
                 egocentric vision.
               </p>
-            </div>
-          </div>
         </div>
       </div>
     </section>
     <!-- End paper abstract -->
 
+    <br>
+
     <section
       class="section hero"
-      style="padding-bottom: 0.75rem; padding-top: 0.5rem"
+      style="padding-bottom: 0.75rem; padding-top: 1rem"
     >
       <div class="container is-max-desktop">
         <div
@@ -277,25 +279,67 @@
           class="hero-body"
           style="padding-bottom: 0.75rem; padding-top: 0.5rem"
         >
-          <h4 class="title is-3">
+          <h3 class="title is-3">
             🔧 Learning high-level human activities without supervision
-          </h4>
+          </h3>
           <p>
             We design HiERO based on the intuition that, given a sufficiently
             large collection of videos capturing human activities in-the-wild,
-            <b
-              ><i>functional dependencies</i> between actions naturally emerge
-              as frequently co-occurring patterns directly from observations</b
-            >. With HiERO, we learn a feature space that captures these
-            functional dependencies between actions, i.e., those that frequently
-            co-occur together are close to each other and distant from the
-            others. As a result,
+          <i>functional dependencies</i> between actions naturally emerge
+              as frequently co-occurring patterns directly from observations. As a result,
             <b
               >HiERO's features space allows related actions to be easily
               grouped into high-level patterns with a simple clustering
               operation</b
             >.
           </p>
+
+          <br>
+          <h6 class="title is-5" style="text-align: center;">
+            <b>HiERO is built on two objectives:</b>
+          </h6>
+          <br>
+
+          <div class="columns">
+            <div class="column is-half">
+              <figure class="image m-4" style="margin-top: 32px; margin-bottom: 32px">
+            <img
+              src="static/images/alignment.png"
+              alt=""
+              style="max-width: 768px; margin: auto; margin-bottom: 0.75rem"
+            />
+            <caption>
+              <center>
+                <b>Video-Narrations Alignment</b>
+              <br>
+              <small>
+                Align segments of a video with their corresponding narrations to learn pattern of related actions.
+              </small>
+              </center>
+              </caption></figure>
+            </div>
+            <div class="column is-half">
+              <figure class="image m-4" style="margin-top: 32px; margin-bottom: 32px">
+            <img
+              src="static/images/cm.png"
+              alt=""
+              style="max-width: 768px; margin: auto; margin-bottom: 0.75rem"
+            />
+            <caption>
+              <center>
+                <b>Functional Threads clustering</b>
+              <br>
+              <small>
+                Group together actions that are functionally similar (and make them even more similar using contrastive alignment).
+              </small>
+              </center>
+              </caption></figure>
+            </div>
+          </div>
+
+          <h5 class="title is-5">
+            The HiERO architecture
+          </h5>
           <figure class="image" style="margin-top: 32px; margin-bottom: 32px">
             <img
               src="static/images/architecture.png"
@@ -333,9 +377,9 @@
           class="hero-body"
           style="padding-bottom: 0.75rem; padding-top: 0.5rem"
         >
-          <h4 class="title is-4">
+          <h3 class="title is-3">
             🔥 HiERO is good at video-language alignment...
-          </h4>
+          </h3>
           <p>
             We evaluate HiERO on EgoMCQ and EgoNLQ to validate its video-text
             alignment capabilities and to show that reasoning on functional
@@ -353,7 +397,7 @@
               style="max-width: 768px; margin: auto"
             />
             <caption>
-              <center><b>HiERO results on EgoMCQ and EgoNLQ.</b></center>
+              <center>HiERO results on EgoMCQ and EgoNLQ.</center>
             </caption>
           </figure>
         </div>
@@ -368,7 +412,7 @@
           class="hero-body"
           style="padding-bottom: 0.75rem; padding-top: 0.5rem"
         >
-          <h4 class="title is-4">
+          <h4 class="title is-3">
             🚀 ...and excels at (zero-shot) procedure learning!
           </h4>
           <p>
@@ -387,7 +431,7 @@
             />
             <caption>
               <center>
-                <b>HiERO results on Procedure Learning on EgoProceL.</b>
+                HiERO results on Procedure Learning on EgoProceL.
               </center>
             </caption>
           </figure>
@@ -417,6 +461,9 @@
                 src="static/images/0f07958c-04e3-4be9-9118-f3313c4e183e.pdf-1.jpg"
                 alt="Carousel Image 1"
               />
+              <caption>
+
+              </caption>
             </figure>
           </div>
           <div class="item">

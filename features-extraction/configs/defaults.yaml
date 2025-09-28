@@ -1,0 +1,19 @@
+batch_size: 16
+
+# Number of frames and stride of the features extraction window
+num_frames: 16
+stride: 16
+
+# Path to the video
+path: ???
+
+# Output directory for the features
+out_dir: ???
+
+# Torch device to use for features extraction
+device: cuda
+
+defaults:
+  - model: omnivore
+  - override hydra/job_logging: colorlog
+  - override hydra/hydra_logging: colorlog

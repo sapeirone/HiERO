@@ -1,0 +1,10 @@
+_target_: models.egovlp.egovlp.EgoVLPFeaturesExtractor
+
+num_frames: ${..num_frames}
+
+# EgoVLP checkpoint (from https://drive.google.com/file/d/1-cP3Gcg0NGDcMZalgJ_615BQdbFIbcj7/view?usp=sharing)
+checkpoint_path: '../pretrained/egovlp.pth'
+# ViT checkpoint (from https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-vitjx/jx_vit_base_p16_224-80ecf9dd.pth)
+vit_ckpt: '../pretrained/jx_vit_base_p16_224-80ecf9dd.pth'
+
+proj: False

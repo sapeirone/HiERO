@@ -1,0 +1,4 @@
+_target_: models.omnivore.OmnivoreFeaturesExtractor
+
+# The Omnivore variant to use for features extraction
+variant: omnivore_swinL_imagenet21k

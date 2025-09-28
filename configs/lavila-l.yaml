@@ -1,0 +1,13 @@
+defaults:
+  - defaults
+  - features: ego4d/lavila-l
+  - _self_
+
+task:
+  text_encoder: clip
+  text_encoder_weights: 'pretrained/lavila-l_text.pth' 
+
+hydra:
+  searchpath:
+    - file://configs/experiments
+    - file://configs/components

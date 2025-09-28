@@ -1,0 +1,5 @@
+name: LaViLa-L
+stride: 16
+window: 16
+fps: 30.0
+size: 256

@@ -1,0 +1,13 @@
+defaults:
+  - defaults
+  - features: ego4d/omnivore_video
+  - _self_
+
+task:
+  text_encoder_full_ft: True 
+  text_encoder_weights: '' # this is meant to be left empty
+
+hydra:
+  searchpath:
+    - file://configs/experiments
+    - file://configs/components

@@ -1,0 +1,12 @@
+defaults:
+  - defaults
+  - features: ego4d/egovlp
+  - _self_
+
+task:
+  text_encoder_weights: 'pretrained/egovlp_text.pth'
+
+hydra:
+  searchpath:
+    - file://configs/experiments
+    - file://configs/components

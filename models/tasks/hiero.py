@@ -214,7 +214,7 @@ class HiEROTask(nn.Module):
 
         # Video-Narrations Alignment loss (L_vna)
         vna_loss = compute_vna_loss(
-            pos, depth, vis_features, text_features, data.narration_timestamps, video_narrations_mask, alpha=self.alpha, beta=self.beta, mode=self.contrastive_mode, temperature=self.temperature
+            vis_features, text_features, pos, depth, data.narration_timestamps, video_narrations_mask, alpha=self.alpha, beta=self.beta, mode=self.contrastive_mode, temperature=self.temperature
         )
 
         # Functional Threads loss (L_ft)

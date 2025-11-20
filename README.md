@@ -56,19 +56,20 @@ The resulting `data/ego4d/raw` should be structured as follows:
 ```
 data/ego4d/raw
           └─── annotations
-               ├─── v1
-               │    │ ego4d.json
+          │    ├─── v1
+          │    │    │ ego4d.json
+          │    │    │ ...
+          │    ├──── egoclip.csv
+          │    └──── egomcq.json
+          │
+          └─── features
+               ├─── omnivore_video_swinl
+               │    │ 64b355f3-ef49-4990-8622-9e9eef68b495.pth
                │    │ ...
-               ├──── egoclip.csv
-               ├──── egomcq.json
-               └─── features
-                    ├─── omnivore_video_swinl
-                    │    │ 64b355f3-ef49-4990-8622-9e9eef68b495.pth
-                    │    │ ...
-                    │     
-                    └─── egovlp
-                         │ 64b355f3-ef49-4990-8622-9e9eef68b495.pth
-                         │ ...
+               │     
+               └─── egovlp
+                    │ 64b355f3-ef49-4990-8622-9e9eef68b495.pth
+                    │ ...
 ```
 
 #### Pretrained components

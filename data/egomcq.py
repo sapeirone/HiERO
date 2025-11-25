@@ -90,7 +90,7 @@ class EgoMCQDataset(Dataset):
 
         for choice in sample.choices:
             # load features
-            feats = torch.load(osp.join(self._features_path, f"{choice.video_uid}.pt"))
+            feats = torch.load(osp.join(self._features_path, f"{choice.video_uid}.pt"), weights_only=True).float()
 
             segment_idx_start = floor(choice.start * self.features.fps // self.features.stride)
             segment_idx_end = ceil(choice.end * self.features.fps // self.features.stride)

@@ -128,7 +128,7 @@ class EgoClipDataset(Dataset):  # pylint: disable=W0223
     def get(self, idx):
         video: EgoClipSegment = self.samples[idx]
         # load features
-        feats = torch.load(osp.join(self._features_path, f"{video.video_uid}.pt"), weights_only=True)
+        feats = torch.load(osp.join(self._features_path, f"{video.video_uid}.pt"), weights_only=True).float()
 
         idx_start = floor(video.time_start * self.features.fps // self.features.stride)
         idx_end = min(len(feats), ceil((video.time_start + 300) * self.features.fps // self.features.stride))

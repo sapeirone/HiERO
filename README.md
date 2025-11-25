@@ -128,10 +128,12 @@ This codebase is based on our previous works [EgoPack](https://github.com/sapeir
 ## Cite Us
 
 ```BibTeX
-@article{peirone2025hiero,
-  title={HiERO: understanding the hierarchy of human behavior enhances reasoning on egocentric videos},
-  author={Peirone, Simone Alberto and Pistilli, Francesca and Averta, Giuseppe},
-  journal={arXiv preprint arXiv:2505.12911},
-  year={2025}
+@InProceedings{Peirone_2025_ICCV,
+    author    = {Peirone, Simone Alberto and Pistilli, Francesca and Averta, Giuseppe},
+    title     = {HiERO: Understanding the Hierarchy of Human Behavior Enhances Reasoning on Egocentric Videos},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    year      = {2025},
+    pages     = {19862-19871}
 }
 ```

@@ -10,6 +10,9 @@
 <div align="center">
 <a href='https://arxiv.org/abs/2505.12911' style="margin: 10px"><img src='https://img.shields.io/badge/Paper-Arxiv:2505.12911-red'></a>
 <a href='https://sapeirone.github.io/HiERO/' style="margin: 10px"><img src='https://img.shields.io/badge/Project-Page-Green'></a>
+<a target="_blank" href="https://colab.research.google.com/github/sapeirone/HiERO/blob/main/quickstart.ipynb" style="margin: 10px">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a>
 </div>
 
 <br>

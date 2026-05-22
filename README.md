@@ -17,6 +17,9 @@
 
 <br>
 
+> [!TIP]
+> Our extension **HiERO-StepG** significantly improves zero-shot step grounding ranking second at the Ego4D Step Grounding Challenge (CVPR 2026). Check out the code [here](https://github.com/andreazenotto/HiERO-StepG)!
+
 <div align="center">
 Welcome to the official repository of our paper "<i>HiERO: understanding the hierarchy of human behavior enhances reasoning on egocentric videos</i>", <b>accepted at ICCV 2025</b>.
 </div>
